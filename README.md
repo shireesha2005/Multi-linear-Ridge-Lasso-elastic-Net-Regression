@@ -54,6 +54,7 @@ Encourages smoother, more generalizable solutions
 
 Why does Ridge keep all features but shrink them?
 
+
 From the coefficient shrinkage path plot for Ridge:
 All coefficients gradually move towards zero
 None of the coefficients become exactly zero
@@ -61,3 +62,29 @@ This happens because Ridge uses L2 regularization, which:
 Penalizes the square of coefficients
 Makes large weights very costly
 Encourages small but non-zero weights
+
+
+Why does Lasso remove features entirely?
+
+
+From the Lasso coefficient path plot:
+Many coefficients drop exactly to zero
+Only a few features remain active
+This occurs because Lasso uses L1 regularization, which:
+
+
+Penalizes absolute values of coefficients
+Creates sharp corners in the optimization space
+Forces less important features to zero
+
+
+Why does Elastic Net behave differently from both?
+
+
+From Elastic Net plots:
+
+Some coefficients shrink smoothly (Ridge-like)
+Some coefficients become zero (Lasso-like)
+This is because Elastic Net combines:
+L1 penalty → feature selection
+L2 penalty → coefficient stability
