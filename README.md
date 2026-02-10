@@ -42,16 +42,8 @@ Encourages sparsity (like Lasso).Discourages large coefficients (like Ridge).Gro
 
 
 Why does regularization improve test performance?
-From the training vs testing error plots, we observe:
-
-Linear Regression achieves very low training error
-
-But its test error is significantly higher
-
-This indicates overfitting — the model learns noise and overly complex patterns in training data.
-
+From the training vs testing error plots, we observe:Linear Regression achieves very low training error But its test error is significantly higher.This indicates overfitting — the model learns noise and overly complex patterns in training data.
 Regularization improves test performance because:
-
 It penalizes large coefficients
 
 Reduces model complexity
@@ -59,3 +51,13 @@ Reduces model complexity
 Prevents the model from fitting noise
 
 Encourages smoother, more generalizable solutions
+
+Why does Ridge keep all features but shrink them?
+
+From the coefficient shrinkage path plot for Ridge:
+All coefficients gradually move towards zero
+None of the coefficients become exactly zero
+This happens because Ridge uses L2 regularization, which:
+Penalizes the square of coefficients
+Makes large weights very costly
+Encourages small but non-zero weights
